@@ -4,37 +4,19 @@ import { ItemType } from "@/types/ItemType";
 import { useSelector } from "react-redux";
 import Image from 'next/image';
 
+// import from ItemProducts
+import { ItemNC1, ItemNC2, ItemNC3, ItemNC4, ItemNC5, ItemNC6 } from "@/components/items/ItemProducts";
+
 export default function Index() {
     const item0 = useSelector((state: any) => state.item.value);
-    const item: ItemType = {
-      id: 0,
-      name: "乃木コレ 賀喜遥香SSR",
-      status: "hold",
-      url: "/images/乃木コレ1.jpg",
-      price: 14000,
-    };
-    const item2: ItemType = {
-      id: 0,
-      name: "乃木コレ 齋藤飛鳥SR",
-      status: "hold",
-      url: "/images/乃木コレ2.jpg",
-      price: 7900,
-    };
-    const item3: ItemType = {
-      id: 0,
-      name: "乃木コレ 中村麗乃",
-      status: "hold",
-      url: "/images/乃木コレ3.jpg",
-      price: 300,
-    };
 
     return (
         <Layout title="home">
             <div className="p-2">
                 <Item item={item0} showPrice={false} />
-                <h2 className="text-left font-type font-bold text-black text-2xl semi-bold text-opacity-80 pt-3 px-3" >{item.name}</h2>
+                <h2 className="text-left font-type font-bold text-black text-2xl semi-bold text-opacity-80 pt-3 px-3" >{ItemNC1.name}</h2>
                 <h2 className="text-left font-type font- text-black text-3xl semi-normal text-opacity-80 pt-1 px-3"> 
-                <span className="text-base font-light px-1">¥</span>{item.price}<span className="text-base font-light mx-1">(税込)</span>
+                <span className="text-base font-light px-1">¥</span>{ItemNC1.price}<span className="text-base font-light mx-1">(税込)</span>
                 </h2>
             </div>
             <div className="flex w-340 h-10 justify-center text-center bg-blue-100 rounded-lg m-2 py-2">
@@ -86,9 +68,9 @@ export default function Index() {
             </div>
             <p className="mt-5 px-2 font-type1 text-black font-semibold first-letter text-left border-b-2 ">類似商品</ p>
                 <div className="grid grid-cols-3 gap-4 p-2">
-                <Item item={item} showPrice={true} />
-                <Item item={item2} showPrice={true} />
-                <Item item={item3} showPrice={true} />
+                <Item item={ItemNC1} showPrice={true} />
+                <Item item={ItemNC2} showPrice={true} />
+                <Item item={ItemNC3} showPrice={true} />
             </div>
             <div className="my-20">
             </div>

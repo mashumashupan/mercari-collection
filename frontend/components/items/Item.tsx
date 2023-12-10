@@ -45,11 +45,10 @@ const Item = ({ item, showPrice }: { item: ItemType; showPrice: boolean }) => {
           <div></div>
         )}
         
-        {/* 名前は表示なし
         <Link href={`${item.url}`} className="text-black h-40 w-30">
           {item.name}
         </Link> 
-        */}
+       
         {/* 料金表示 */}
         {showPrice && (
         <div className="absolute left-0 text-left text-white font-bold bg-black bg-opacity-40 mb-2 px-5 rounded-r-2xl">
