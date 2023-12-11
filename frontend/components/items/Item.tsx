@@ -6,12 +6,12 @@ const Item = ({ item, showPrice }: { item: ItemType; showPrice: boolean }) => {
   console.log(item)
   return (
     //アイテムを正方形にする
-    <div className="h-50 w-50 border-4">
-      <div className="text-center py-5 relative">
+    <div className="border-4">
+      <div className="text-center relative w-36 h-40">
         <div className="flex justify-center items-center">
           <Image
             src={`${item.url}`}
-            className="object-contain h-48 w-48"
+            className="object-contain"
             width={100}
             height={100}
             alt="Picture of the author"
@@ -21,8 +21,8 @@ const Item = ({ item, showPrice }: { item: ItemType; showPrice: boolean }) => {
           //soldタグをレスポンシブにする
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="122"
-            height="122"
+            width="50"
+            height="50"
             viewBox="0 0 122 122"
             fill="none"
             className="absolute top-0 left-0"
@@ -45,9 +45,9 @@ const Item = ({ item, showPrice }: { item: ItemType; showPrice: boolean }) => {
           <div></div>
         )}
         
-        <Link href={`${item.url}`} className="text-black h-40 w-30">
+        {/* <Link href={`${item.url}`} className="text-black h-40 w-30">
           {item.name}
-        </Link> 
+        </Link>  */}
        
         {/* 料金表示 */}
         {showPrice && (
