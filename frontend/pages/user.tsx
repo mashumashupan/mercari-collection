@@ -45,7 +45,7 @@ export default function Index() {
 
   return (
     <Layout title="home">
-      <div className="absolute w-full brightness-75">
+      <div className="absolute w-full brightness-">
         <img className="h-48 w-full object-cover" src="/images/Alice背景.jpg" />
       </div>
       <div className="relative">
